@@ -1,0 +1,47 @@
+name: 🐛 Bug report
+description: Report a reproducible problem
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please search existing issues first — your bug may already be known.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+      placeholder: When I run ..., I expect ..., but instead ...
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: A minimal, self-contained reproduction. Code or commands preferred.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Versions that matter — OS, Python/runtime version, package version or commit SHA.
+      placeholder: |
+        - OS:
+        - Runtime version:
+        - Package version / commit:
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / traceback
+      description: Paste the full error output. This is automatically formatted as code.
+      render: shell
+    validations:
+      required: false
