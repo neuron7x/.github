@@ -1,68 +1,74 @@
 <div align="center">
 
-<svg width="860" height="180" viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
-      .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
-    </style>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <linearGradient id="fadeH" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FF6600;stop-opacity:0"/>
-      <stop offset="20%" style="stop-color:#FF6600;stop-opacity:1"/>
-      <stop offset="80%" style="stop-color:#FF6600;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#FF6600;stop-opacity:0"/>
-    </linearGradient>
-    <linearGradient id="scan" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF6600;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#FF6600;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#FF6600;stop-opacity:0"/>
-    </linearGradient>
-  </defs>
+<!--  ⊛  ANIMATED HEADER  ⊛  -->
+<svg width="860" height="220" viewBox="0 0 860 220" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="hfade" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   style="stop-color:#FF6600;stop-opacity:0"/>
+    <stop offset="18%"  style="stop-color:#FF6600;stop-opacity:1"/>
+    <stop offset="82%"  style="stop-color:#FF6600;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#FF6600;stop-opacity:0"/>
+  </linearGradient>
+  <filter id="halo">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="softhalo">
+    <feGaussianBlur stdDeviation="2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <!-- scan sweep -->
+  <linearGradient id="sweep" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%"   style="stop-color:#FF6600;stop-opacity:0"/>
+    <stop offset="50%"  style="stop-color:#FF6600;stop-opacity:0.07"/>
+    <stop offset="100%" style="stop-color:#FF6600;stop-opacity:0"/>
+  </linearGradient>
+</defs>
 
-  <!-- background -->
-  <rect width="860" height="180" fill="#0a0a0a" rx="4"/>
+<!-- bg -->
+<rect width="860" height="220" fill="#080808" rx="6"/>
 
-  <!-- scan line animation -->
-  <rect width="860" height="60" fill="url(#scan)" rx="0">
-    <animateTransform attributeName="transform" type="translate" from="0,-60" to="0,180"
-      dur="4s" repeatCount="indefinite"/>
-  </rect>
+<!-- scan line -->
+<rect width="860" height="80" fill="url(#sweep)">
+  <animateTransform attributeName="transform" type="translate"
+    from="0,-80" to="0,220" dur="5s" repeatCount="indefinite"/>
+</rect>
 
-  <!-- top rule -->
-  <rect x="40" y="28" width="780" height="1" fill="url(#fadeH)" opacity="0.6"/>
+<!-- top rule -->
+<rect x="36" y="30" width="788" height="1" fill="url(#hfade)" opacity="0.7"/>
 
-  <!-- ⊛ symbol -->
-  <text x="430" y="72" text-anchor="middle" class="mono"
-    font-size="28" font-weight="700" fill="#FF6600" filter="url(#glow)"
-    letter-spacing="2">
-    ⊛
-    <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
-  </text>
+<!-- ⊛ pulsing -->
+<text x="430" y="82" text-anchor="middle"
+  font-family="'JetBrains Mono',monospace" font-size="30" font-weight="700"
+  fill="#FF6600" filter="url(#halo)">⊛
+  <animate attributeName="opacity" values="1;0.35;1" dur="2.8s" repeatCount="indefinite"/>
+</text>
 
-  <!-- name -->
-  <text x="430" y="110" text-anchor="middle" class="mono"
-    font-size="22" font-weight="700" fill="#FAFAFA" letter-spacing="6">
-    YAROSLAV VASYLENKO
-  </text>
+<!-- name -->
+<text x="430" y="120" text-anchor="middle"
+  font-family="'JetBrains Mono',monospace" font-size="20" font-weight="700"
+  fill="#F0F0F0" letter-spacing="8">YAROSLAV VASYLENKO</text>
 
-  <!-- tagline -->
-  <text x="430" y="136" text-anchor="middle" class="mono"
-    font-size="11" fill="#666666" letter-spacing="4">
-    NEURON7XLAB · POLTAVA · UKRAINE
-  </text>
+<!-- role line -->
+<text x="430" y="146" text-anchor="middle"
+  font-family="'JetBrains Mono',monospace" font-size="10.5"
+  fill="#FF6600" letter-spacing="4" filter="url(#softhalo)"
+  opacity="0.9">COMPUTATIONAL NEUROSCIENCE · AI SYSTEMS · QUANT PHYSICS</text>
 
-  <!-- axiom -->
-  <text x="430" y="158" text-anchor="middle" class="mono"
-    font-size="10" fill="#444444" letter-spacing="1">
-    where information is computed and interpreted — intelligence exists
-  </text>
+<!-- axiom -->
+<text x="430" y="170" text-anchor="middle"
+  font-family="'JetBrains Mono',monospace" font-size="10"
+  fill="#3a3a3a" letter-spacing="1.5">
+  where information is computed and interpreted — intelligence exists
+</text>
 
-  <!-- bottom rule -->
-  <rect x="40" y="168" width="780" height="1" fill="url(#fadeH)" opacity="0.6"/>
+<!-- location -->
+<text x="430" y="192" text-anchor="middle"
+  font-family="'JetBrains Mono',monospace" font-size="9"
+  fill="#2a2a2a" letter-spacing="3">POLTAVA · UKRAINE · SOLO OPERATOR</text>
+
+<!-- bottom rule -->
+<rect x="36" y="206" width="788" height="1" fill="url(#hfade)" opacity="0.7"/>
 </svg>
 
 </div>
@@ -70,82 +76,115 @@
 <br>
 
 ```
-⊛════════════════════════════════════════════════════════════════════════⊛
-  computational neuroscience  ·  AI systems architecture  ·  quant finance
-  adversarial orchestration   ·  solo operator             ·  fail-closed
-⊛════════════════════════════════════════════════════════════════════════⊛
+⊛══════════════════════════════════════════════════════════════════════════════⊛
+  I study the biological brain — not to simulate it, but to extract
+  its operating principles and encode them into verifiable artifacts.
+  
+  The brain is a prediction machine. Its core loop:
+    perceive → compress → infer → act → verify → close
+  
+  I build the same loop into AI systems, trading circuits for code,
+  neurons for agents, synaptic weight for adversarial verification.
+⊛══════════════════════════════════════════════════════════════════════════════⊛
 ```
 
 <br>
 
-## what i build
+## first principles — extracted from biology
 
-**[GeoSync](https://github.com/neuron7xLab/GeoSync)** — cross-asset signal via Kuramoto phase synchrony + Ricci curvature.
-physics kernel: shadow validation live. verdict: july 2026.
-
-**[NeoSynaptex](https://github.com/neuron7xLab/NeoSynaptex)** — γ≈1.0 cross-substrate metastability framework.
-CI hardened · SHA-pinned supply chain · multiple PRs merged.
-
-**[neurophase](https://github.com/neuron7xLab/neurophase)** — EEG pipeline on ds003474. SCP analysis.
-canonical formula: `γ_PSD = 2H + 1`
-
-**NFI** — four-layer cognitive machine: `ML-SDM → CA1-LAM → BN-Syn → MFN⁺`
-formally defined truth interface. zero-level closed loop contract 2026-03-31.
+| biological mechanism | engineering translation | in my work |
+|---|---|---|
+| predictive coding (Friston) | compression = understanding | every output must compress without losing information |
+| phase synchrony γ-band | Kuramoto coupling as signal | GeoSync physics kernel |
+| dendritic computation | multi-layer adversarial audit | Creator → Critic → Auditor → Verifier |
+| homeostatic plasticity | fail-closed gates, not soft limits | 49 closed-unmerged PR = healthy |
+| Hebbian convergence | CI as physical invariant verifier | ci_green = closed loop |
 
 <br>
 
-## verified 30-day output (2026-05-17 → 2026-06-16)
+## value functions — ordered by binding force
 
-| metric | value | classification |
-|--------|-------|----------------|
-| commits | **764** | — |
-| PRs merged | **396** | — |
-| merge rate | **89%** | — |
-| lead time (median) | **28 min** | DORA Elite |
-| deployment frequency | **12.8 / day** | DORA Elite |
-| active days | **28 / 31** | — |
+```python
+V1  reversibility × blast_radius     # gate before every action          weight=1.0
+V2  signal / (signal + noise)         # compress without losing meaning   weight=0.95
+V3  numerical_verified(claim)         # quantitative → prove or mark HYP  weight=0.90
+V4  adversarial_survived(hypothesis)  # PARCH-FALSIFY-001 before commit   weight=0.85
+V5  context_integrity(session)        # flag drift, never inherit silently weight=0.80
+V6  genuine_execution(task)           # unhelpfulness is never safe        weight=0.75
+```
 
-> source: GitHub GraphQL API (`contributionsCollection`) + PR search · DORA framework (Google/DevOps Research)
-> self-merge solo mode · collaboration axis not measured · N/A = honestly not instrumented
+<br>
+
+## active research
+
+**[GeoSync](https://github.com/neuron7xLab/GeoSync)**
+cross-asset signal via Kuramoto phase synchrony + Ricci curvature flow.
+`shadow validation live` · physics kernel gate green · verdict: **july 2026**
+
+```
+γ_PSD = 2H + 1    ← canonical
+γ     = 2H − 1    ← known error, reject on sight
+```
+
+**NeoSynaptex** — γ≈1.0 cross-substrate metastability.
+CI hardened · SHA-pinned supply chain · multiple PRs merged.
+
+**NFI** — four-layer cognitive machine with a formally defined truth interface.
+`ML-SDM → CA1-LAM → BN-Syn → MFN⁺` · zero-level closed loop contract 2026-03-31
+
+**neurophase** — EEG pipeline on ds003474. SCP analysis.
+
+<br>
+
+## verified 30-day execution (2026-05-17 → 2026-06-16)
+
+```
+  764 commits     396 PRs merged    89% merge rate
+  28 min median lead time           28/31 active days
+
+  DORA Elite: deployment frequency + lead time
+  source: GitHub GraphQL API · DORA (Google/DevOps Research & Assessment)
+
+  honest limits: CFR and MTTR not instrumented (solo mode, no incident pipeline)
+  solo self-merge → DORA numbers are real but calibrated for team review queues
+```
 
 <br>
 
 ## methodology
 
 ```
-Creator → Critic → Auditor → Verifier
-```
+adversarial orchestration — self as central decision node
 
-adversarial orchestration. self as central decision node.
-every output passes PARCH-FALSIFY-001 before commit.
-instrument kills its own hypothesis. 49 closed-unmerged PR = healthy fail-closed.
+  Creator  →  generates hypothesis
+  Critic   →  PARCH-FALSIFY-001 attack
+  Auditor  →  internal consistency check
+  Verifier →  numerical / empirical ground truth
 
-<br>
-
-## canon
-
-```python
-γ_PSD = 2*H + 1          # canonical. always.
-γ     = 2*H - 1          # known error. reject on sight.
-
-axiom = "physics starts where you stop explaining and start computing"
+  output emitted only if Auditor + Verifier both pass
+  else → return to L1 with failure annotation        ⊛
 ```
 
 <br>
 
-## stack
+## sources of inspiration
 
-`Python` `GitHub Actions` `Claude Code` `FastMCP` `n8n`
-`Kuramoto` `Ricci flow` `EEG / MNE` `SQLite` `systemd`
-
-local hardware · Ubuntu lowlatency · forest, Poltava region
+`Friston · free energy principle` &nbsp; `Sapolsky · behavioral biology`
+`Anokhin · functional systems theory` &nbsp; `Dubinin · genetics of behavior`
+`Kuramoto · phase oscillators` &nbsp; `Ricci flow · geometric analysis`
 
 <br>
 
 ```
-⊛════════════════════════════════════════════════════════════════════════⊛
+⊛══════════════════════════════════════════════════════════════════════════════⊛
+  physics starts where you stop explaining and start computing
+⊛══════════════════════════════════════════════════════════════════════════════⊛
 ```
 
 <div align="center">
-<sub><code>neuron7xLab · vasylenko7x · 2025–</code></sub>
+<sub>
+<code>neuron7xLab · vasylenko7x · 2025–</code>
+&nbsp;·&nbsp;
+<code>instagram: vasylenko7x / neuron7xLab</code>
+</sub>
 </div>
