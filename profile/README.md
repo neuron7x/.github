@@ -1,75 +1,18 @@
 <div align="center">
 
-<!--  ⊛  ANIMATED HEADER  ⊛  -->
-<svg width="860" height="220" viewBox="0 0 860 220" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <linearGradient id="hfade" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   style="stop-color:#FF6600;stop-opacity:0"/>
-    <stop offset="18%"  style="stop-color:#FF6600;stop-opacity:1"/>
-    <stop offset="82%"  style="stop-color:#FF6600;stop-opacity:1"/>
-    <stop offset="100%" style="stop-color:#FF6600;stop-opacity:0"/>
-  </linearGradient>
-  <filter id="halo">
-    <feGaussianBlur stdDeviation="4" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="softhalo">
-    <feGaussianBlur stdDeviation="2" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <!-- scan sweep -->
-  <linearGradient id="sweep" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%"   style="stop-color:#FF6600;stop-opacity:0"/>
-    <stop offset="50%"  style="stop-color:#FF6600;stop-opacity:0.07"/>
-    <stop offset="100%" style="stop-color:#FF6600;stop-opacity:0"/>
-  </linearGradient>
-</defs>
+<img src="https://raw.githubusercontent.com/neuron7xLab/.github/main/profile/assets/brain.svg" alt="neural connectome" width="100%"/>
 
-<!-- bg -->
-<rect width="860" height="220" fill="#080808" rx="6"/>
+<br>
 
-<!-- scan line -->
-<rect width="860" height="80" fill="url(#sweep)">
-  <animateTransform attributeName="transform" type="translate"
-    from="0,-80" to="0,220" dur="5s" repeatCount="indefinite"/>
-</rect>
+# YAROSLAV VASYLENKO
 
-<!-- top rule -->
-<rect x="36" y="30" width="788" height="1" fill="url(#hfade)" opacity="0.7"/>
+**COMPUTATIONAL NEUROSCIENCE · AI SYSTEMS · QUANT PHYSICS**
 
-<!-- ⊛ pulsing -->
-<text x="430" y="82" text-anchor="middle"
-  font-family="'JetBrains Mono',monospace" font-size="30" font-weight="700"
-  fill="#FF6600" filter="url(#halo)">⊛
-  <animate attributeName="opacity" values="1;0.35;1" dur="2.8s" repeatCount="indefinite"/>
-</text>
+`Poltava · Ukraine 🇺🇦`  ·  solo operator  ·  fail-closed by default
 
-<!-- name -->
-<text x="430" y="120" text-anchor="middle"
-  font-family="'JetBrains Mono',monospace" font-size="20" font-weight="700"
-  fill="#F0F0F0" letter-spacing="8">YAROSLAV VASYLENKO</text>
-
-<!-- role line -->
-<text x="430" y="146" text-anchor="middle"
-  font-family="'JetBrains Mono',monospace" font-size="10.5"
-  fill="#FF6600" letter-spacing="4" filter="url(#softhalo)"
-  opacity="0.9">COMPUTATIONAL NEUROSCIENCE · AI SYSTEMS · QUANT PHYSICS</text>
-
-<!-- axiom -->
-<text x="430" y="170" text-anchor="middle"
-  font-family="'JetBrains Mono',monospace" font-size="10"
-  fill="#3a3a3a" letter-spacing="1.5">
-  where information is computed and interpreted — intelligence exists
-</text>
-
-<!-- location -->
-<text x="430" y="192" text-anchor="middle"
-  font-family="'JetBrains Mono',monospace" font-size="9"
-  fill="#2a2a2a" letter-spacing="3">POLTAVA · UKRAINE · SOLO OPERATOR</text>
-
-<!-- bottom rule -->
-<rect x="36" y="206" width="788" height="1" fill="url(#hfade)" opacity="0.7"/>
-</svg>
+[![email](https://img.shields.io/badge/email-neuron7x%40ukr.net-FF6600?style=flat-square&logo=maildotru&logoColor=white&labelColor=080808)](mailto:neuron7x@ukr.net)
+[![github](https://img.shields.io/badge/github-neuron7xLab-FF6600?style=flat-square&logo=github&logoColor=white&labelColor=080808)](https://github.com/neuron7xLab)
+[![instagram](https://img.shields.io/badge/instagram-vasylenko7x-FF6600?style=flat-square&logo=instagram&logoColor=white&labelColor=080808)](https://instagram.com/vasylenko7x)
 
 </div>
 
@@ -77,114 +20,144 @@
 
 ```
 ⊛══════════════════════════════════════════════════════════════════════════════⊛
-  I study the biological brain — not to simulate it, but to extract
-  its operating principles and encode them into verifiable artifacts.
-  
+  I study the biological brain — not to simulate it, but to extract its
+  operating principles and encode them into verifiable artifacts.
+
   The brain is a prediction machine. Its core loop:
-    perceive → compress → infer → act → verify → close
-  
-  I build the same loop into AI systems, trading circuits for code,
-  neurons for agents, synaptic weight for adversarial verification.
+
+      perceive → compress → infer → act → verify → close
+
+  I build the same loop into software: agents for neurons, CI for synaptic
+  weight, adversarial verification for the dendritic vote that gates a spike.
 ⊛══════════════════════════════════════════════════════════════════════════════⊛
 ```
 
 <br>
 
-## first principles — extracted from biology
+## ⊛ first principles — extracted from biology, encoded into engineering
 
-| biological mechanism | engineering translation | in my work |
+| biological mechanism | engineering translation | where it lives in my work |
 |---|---|---|
-| predictive coding (Friston) | compression = understanding | every output must compress without losing information |
-| phase synchrony γ-band | Kuramoto coupling as signal | GeoSync physics kernel |
-| dendritic computation | multi-layer adversarial audit | Creator → Critic → Auditor → Verifier |
-| homeostatic plasticity | fail-closed gates, not soft limits | 49 closed-unmerged PR = healthy |
-| Hebbian convergence | CI as physical invariant verifier | ci_green = closed loop |
+| predictive coding *(Friston)* | compression **is** understanding | every artifact must compress without losing information |
+| γ-band phase synchrony | Kuramoto coupling as a tradable signal | **GeoSync** physics kernel |
+| dendritic computation | multi-layer adversarial audit | `Creator → Critic → Auditor → Verifier` |
+| homeostatic plasticity | fail-closed gates, never soft limits | 49 closed-unmerged PR = a healthy nervous system |
+| Hebbian convergence | CI as a physical invariant verifier | `ci_green` ⇔ the loop is closed |
 
 <br>
 
-## value functions — ordered by binding force
+## ⊛ value functions — ordered by binding force
 
 ```python
-V1  reversibility × blast_radius     # gate before every action          weight=1.0
-V2  signal / (signal + noise)         # compress without losing meaning   weight=0.95
-V3  numerical_verified(claim)         # quantitative → prove or mark HYP  weight=0.90
-V4  adversarial_survived(hypothesis)  # PARCH-FALSIFY-001 before commit   weight=0.85
-V5  context_integrity(session)        # flag drift, never inherit silently weight=0.80
-V6  genuine_execution(task)           # unhelpfulness is never safe        weight=0.75
+V1  reversibility × blast_radius      # gate before every action            weight = 1.00
+V2  signal / (signal + noise)         # compress without losing meaning     weight = 0.95
+V3  numerical_verified(claim)         # quantitative → prove, or mark HYP    weight = 0.90
+V4  adversarial_survived(hypothesis)  # PARCH-FALSIFY-001 before commit      weight = 0.85
+V5  context_integrity(session)        # flag drift, never inherit silently   weight = 0.80
+V6  genuine_execution(task)           # unhelpfulness is never "safe"        weight = 0.75
 ```
 
 <br>
 
-## active research
+## ⊛ active research — 30 public repositories, organized by substrate
 
-**[GeoSync](https://github.com/neuron7xLab/GeoSync)**
-cross-asset signal via Kuramoto phase synchrony + Ricci curvature flow.
-`shadow validation live` · physics kernel gate green · verdict: **july 2026**
+> **🧠 neuroscience & mechanistic models**
 
-```
-γ_PSD = 2H + 1    ← canonical
-γ     = 2H − 1    ← known error, reject on sight
-```
+| repo | what it is |
+|---|---|
+| **[Hippocampal-CA1-LAM](https://github.com/neuron7xLab/Hippocampal-CA1-LAM)** | literature-grounded CA1 model: two-compartment neuron, theta–SWR switching, Ca²⁺ plasticity |
+| **[mlsdm](https://github.com/neuron7xLab/mlsdm)** | multi-level synaptic dynamic memory — synaptic consolidation, circadian rhythm, aphasia detection for LLMs |
+| **[bnsyn-phase-controlled-emergent-dynamics](https://github.com/neuron7xLab/bnsyn-phase-controlled-emergent-dynamics)** | deterministic spiking simulator: AdEx + STDP + criticality control + sleep–wake consolidation |
+| **[pfc-coherent-induction](https://github.com/neuron7xLab/pfc-coherent-induction)** | PFC coherent induction — multi-task transfer, 134-probe battery, 2000× determinism |
 
-**NeoSynaptex** — γ≈1.0 cross-substrate metastability.
-CI hardened · SHA-pinned supply chain · multiple PRs merged.
+> **🌐 AI systems & cognitive architecture**
 
-**NFI** — four-layer cognitive machine with a formally defined truth interface.
-`ML-SDM → CA1-LAM → BN-Syn → MFN⁺` · zero-level closed loop contract 2026-03-31
+| repo | what it is |
+|---|---|
+| **[neosynaptex](https://github.com/neuron7xLab/neosynaptex)** | NFI mirror layer — cross-domain γ-scaling coherence: bootstrap CI, Granger causality, phase portraits |
+| **[noesis](https://github.com/neuron7xLab/noesis)** | externalized metacognition with an IEV precision gate `w = αR + βV + γP − δK ≥ θ` |
+| **[mycelium-fractal-net](https://github.com/neuron7xLab/mycelium-fractal-net)** | morphogenetic field engine: reaction-diffusion + TDA + 46 causal rules + self-healing |
+| **[prompt-x-lab](https://github.com/neuron7xLab/prompt-x-lab)** | high-fidelity prompts, cognitive architectures & agent protocols for frontier models |
 
-**neurophase** — EEG pipeline on ds003474. SCP analysis.
+> **📈 quant & physics**
 
-<br>
+| repo | what it is |
+|---|---|
+| **[GeoSync](https://github.com/neuron7xLab/GeoSync)** | geometric market intelligence — Kuramoto synchrony · Ollivier–Ricci curvature · fractal dynamics |
+| **[kuramoto-cross-asset](https://github.com/neuron7xLab/kuramoto-cross-asset)** | cross-asset phase-coherence regime indicator — OOS `SUPPORTED_SCOPED`, incremental claim honestly `REJECTED` |
+| **[neurophase](https://github.com/neuron7xLab/neurophase)** | phase synchronization as an execution gate — Kuramoto of *market × trader* nervous system |
+| **[substrate-universe](https://github.com/neuron7xLab/substrate-universe)** | multi-physics tick orchestrator: reaction-diffusion + Kuramoto-Ricci + AdEx + SHA-256 evidence ledger |
 
-## verified 30-day execution (2026-05-17 → 2026-06-16)
+> **🔬 verification, integrity & falsification**
 
-```
-  764 commits     396 PRs merged    89% merge rate
-  28 min median lead time           28/31 active days
-
-  DORA Elite: deployment frequency + lead time
-  source: GitHub GraphQL API · DORA (Google/DevOps Research & Assessment)
-
-  honest limits: CFR and MTTR not instrumented (solo mode, no incident pipeline)
-  solo self-merge → DORA numbers are real but calibrated for team review queues
-```
-
-<br>
-
-## methodology
-
-```
-adversarial orchestration — self as central decision node
-
-  Creator  →  generates hypothesis
-  Critic   →  PARCH-FALSIFY-001 attack
-  Auditor  →  internal consistency check
-  Verifier →  numerical / empirical ground truth
-
-  output emitted only if Auditor + Verifier both pass
-  else → return to L1 with failure annotation        ⊛
-```
+| repo | what it is |
+|---|---|
+| **[bive](https://github.com/neuron7xLab/bive)** | evidence-first transcript verification & review engine — *not* a lie detector |
+| **[proof-of-state](https://github.com/neuron7xLab/proof-of-state)** | trust-minimized release-state attestation where `UNKNOWN` never equals `PASS` |
+| **[time-rupture-inference](https://github.com/neuron7xLab/time-rupture-inference)** | falsification-first temporal inference — pinned falsifier → adversarial battery → sealed verdict |
+| **[measured-honesty](https://github.com/neuron7xLab/measured-honesty)** | five falsification studies of an instrument's own limits — every figure executed or `BLOCKED` |
+| **[eval-integrity](https://github.com/neuron7xLab/eval-integrity)** | adversarial construct-validity auditor — catches confident, significant, *wrong* results |
+| **[omega-operator](https://github.com/neuron7xLab/omega-operator)** | ⊛ Zero-Entropy Operator — `Veni · Vidi · Vici` falsification gate, 5-axis coherence |
 
 <br>
 
-## sources of inspiration
+## ⊛ verified 30-day execution — 2026-05-17 → 2026-06-16
 
-`Friston · free energy principle` &nbsp; `Sapolsky · behavioral biology`
-`Anokhin · functional systems theory` &nbsp; `Dubinin · genetics of behavior`
-`Kuramoto · phase oscillators` &nbsp; `Ricci flow · geometric analysis`
+```
+   764 commits        396 PRs merged        89% merge rate
+   49 closed-unmerged PR (fail-closed, on purpose)
+   28 min median lead time                  28 / 31 active days
+
+   DORA Elite band: deployment frequency + lead time
+   source: GitHub GraphQL contributionsCollection + PR search · DORA (Google DORA)
+
+   honest limits — CFR and MTTR not instrumented (solo mode, no incident pipeline).
+   solo self-merge: numbers are real but calibrated for team review queues, not a team.
+```
 
 <br>
 
+## ⊛ methodology — adversarial orchestration, self as central decision node
+
 ```
-⊛══════════════════════════════════════════════════════════════════════════════⊛
-  physics starts where you stop explaining and start computing
-⊛══════════════════════════════════════════════════════════════════════════════⊛
+   Creator   →  generates the hypothesis
+   Critic    →  PARCH-FALSIFY-001 attack
+   Auditor   →  internal-consistency check
+   Verifier  →  numerical / empirical ground truth
+
+   output is emitted only if Auditor ∧ Verifier both pass
+   otherwise → return to L1 with a failure annotation          ⊛
 ```
+
+<br>
+
+## ⊛ canon
+
+```python
+γ_PSD = 2*H + 1          # canonical. always.
+γ     = 2*H - 1          # known error. reject on sight.
+
+axiom = "physics starts where you stop explaining and start computing"
+```
+
+<br>
+
+## ⊛ stack & lineage
+
+`Python` · `GitHub Actions` · `Claude Code` · `FastMCP` · `n8n` · `NumPy` · `EEG / MNE` · `SQLite` · `systemd`
+
+`Friston — free energy` · `Sapolsky — behavioral biology` · `Anokhin — functional systems` · `Dubinin — genetics of behavior` · `Kuramoto — phase oscillators` · `Ricci — geometric flow`
+
+<br>
 
 <div align="center">
-<sub>
-<code>neuron7xLab · vasylenko7x · 2025–</code>
-&nbsp;·&nbsp;
-<code>instagram: vasylenko7x / neuron7xLab</code>
-</sub>
+
+```
+⊛══════════════════════════════════════════════════════════════════════════════⊛
+   physics starts where you stop explaining and start computing
+⊛══════════════════════════════════════════════════════════════════════════════⊛
+```
+
+<sub><code>neuron7xLab · vasylenko7x · 2025–</code> · <code>neuron7x@ukr.net</code></sub>
+
 </div>
